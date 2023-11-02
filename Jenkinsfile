@@ -21,7 +21,7 @@ pipeline {
                 }
             }
         }
-        stage('Terraform Action') {
+        stage('Terraform Apply') {
             when {
                 expression { params.TerraformAction == 'Apply' }
             }
@@ -31,7 +31,7 @@ pipeline {
                 }
             }
         }
-        stage('Terraform Action') {
+        stage('Terraform Destroy') {
             when {
                 expression { params.TerraformAction == 'Destroy' }
             }
@@ -43,4 +43,3 @@ pipeline {
         }
     }
 }
-
