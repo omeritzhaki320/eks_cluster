@@ -25,7 +25,7 @@ resource "aws_iam_role_policy_attachment" "user-auth-AmazonEKSClusterPolicy" {
 resource "aws_eks_cluster" "user-auth" {
   name     = "user-auth"
   role_arn = aws_iam_role.user-auth.arn
-  version  = "1.28"
+  version  = "1.27"
 
   vpc_config {
     subnet_ids = [
